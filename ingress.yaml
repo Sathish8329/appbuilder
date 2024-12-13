@@ -18,21 +18,21 @@ spec:
         pathType: Prefix
         backend:
           service:
-            name: pirapp-api-service
+            name: appbuilder-api-service
             port:
               number: 8000
       - path: /auth
         pathType: Prefix
         backend:
           service:
-            name: pirapp-auth-service
+            name: appbuilder-auth-service
             port:
               number: 8080
       - path: /
         pathType: Prefix
         backend:
           service:
-            name: pirapp-frontend-service
+            name: appbuilder-frontend-service
             port:
               number: 5001
     
