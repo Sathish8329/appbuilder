@@ -2,7 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: auth-deployment
-  namespace: pirappp
+  namespace: appbuilder
 spec:
   replicas: 1
   strategy:
@@ -22,7 +22,7 @@ spec:
         eks.amazonaws.com/nodegroup: stage   # Specify the node group nam    
       containers:
       - name: auth
-        image: sathish8329/uatauth:841
+        image: sathish8329/appbuilderauth:841
         ports:
         - containerPort: 8080
         livenessProbe:
@@ -44,8 +44,8 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: pirapp-auth-service
-  namespace: pirappp
+  name: appbuilder-auth-service
+  namespace: appbuilder
 spec:
   selector:
     app: auth
