@@ -2,7 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: api-deployment
-  namespace: pirappp
+  namespace: appbuilder
 spec:
   selector:
     matchLabels:
@@ -22,7 +22,7 @@ spec:
         eks.amazonaws.com/nodegroup: stage   
       containers:
       - name: api
-        image: sathish8329/uatbackend:848
+        image: sathish8329/appbuilderbackend:848
         ports:
         - containerPort: 8000
         livenessProbe:
@@ -43,8 +43,8 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: pirapp-api-service
-  namespace: pirappp
+  name: appbuilder-api-service
+  namespace: appbuilder
 spec:
   selector:
     app: api
