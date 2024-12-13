@@ -2,7 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: frontend-deployment
-  namespace: pirappp
+  namespace: appbuilder
 spec:
   replicas: 1
   strategy:
@@ -22,7 +22,7 @@ spec:
         eks.amazonaws.com/nodegroup: stage    # Specify the node group name
       containers:
       - name: frontend
-        image: sathish8329/uatfront:846
+        image: sathish8329/appbuilderfront:846
         ports:
         - containerPort: 5001
         readinessProbe:  # Add readiness probe
@@ -37,8 +37,8 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: pirapp-frontend-service
-  namespace: pirappp
+  name: appbuilder-frontend-service
+  namespace: appbuilder
 spec:
   selector:
     app: frontend
