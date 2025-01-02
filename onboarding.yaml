@@ -17,7 +17,7 @@ spec:
         eks.amazonaws.com/nodegroup: preprod    # Specify the node group name
       containers:
       - name: frtback
-        image: sathish8329/appbuilderonboarding:1.0.1014
+        image: sathish8329/appbuilderonboarding:1.0.1022
         ports:
         - containerPort: 3000
 ---
