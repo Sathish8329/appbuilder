@@ -22,7 +22,7 @@ spec:
         eks.amazonaws.com/nodegroup: preprod    # Specify the node group name
       containers:
       - name: frontend
-        image: sathish8329/appbuilderfront:1602
+        image: sathish8329/appbuilderfront:1689
         ports:
         - containerPort: 5001
         readinessProbe:  # Add readiness probe
