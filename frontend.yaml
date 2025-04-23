@@ -18,7 +18,7 @@ spec:
       labels:
         app: frontend
     spec:
-      nodeSelector:                            # Correct indentation for nodeSelector
+      nodeSelector:                            # Correct indentation for nodeSelectors
         eks.amazonaws.com/nodegroup: preprod-private    # Specify the node group name
       containers:
       - name: frontend
