@@ -21,7 +21,7 @@ spec:
         app: api
     spec:
       nodeSelector:                            
-        eks.amazonaws.com/nodegroup: stage-private   
+        eks.amazonaws.com/nodegroup: prod-private   
       containers:
       - name: api
         image: sathish8329/appbuilderback:3127
