@@ -24,7 +24,7 @@ spec:
         eks.amazonaws.com/nodegroup: prod-private   
       containers:
       - name: api
-        image: sathish8329/appbuilderback:3827
+        image: sathish8329/appbuilderback:3828
         ports:
         - containerPort: 8000
         livenessProbe:
