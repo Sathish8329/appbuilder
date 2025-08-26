@@ -20,8 +20,8 @@ spec:
       labels:
         app: api
     spec:
-      # nodeSelector:                            
-      #   eks.amazonaws.com/nodegroup: prod-private   
+      nodeSelector:                            
+        eks.amazonaws.com/nodegroup: prod-private   
       containers:
       - name: api
         image: sathish8329/appbuilderback:3828
