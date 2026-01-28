@@ -31,7 +31,7 @@ spec:
             app: api
       containers:
       - name: api
-        image: sathish8329/appbuilderback:6496
+        image: sathish8329/appbuilderback:6503
         ports:
         - containerPort: 8000
         livenessProbe:
